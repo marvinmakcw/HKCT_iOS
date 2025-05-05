@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ou8-Il-hMU">
+            <objects>
+                <viewController id="uUh-nj-9vb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="E05-ts-L6T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctn-hb-rP4">
+                                <rect key="frame" x="149" y="782" width="116" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="D3Y-tf-Egf"/>
+                                    <constraint firstAttribute="width" constant="120" id="M90-aD-fdL"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="eZE-fy-wHP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Play Game" backgroundImage="background">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="titleShadowColor" red="0.037475412728632709" green="0.2492106541450777" blue="0.040924866245306529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome To WarCardGame" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAq-m2-acD">
+                                <rect key="frame" x="20" y="44" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="K6k-aZ-2iG"/>
+                                    <constraint firstAttribute="width" constant="250" id="O3e-sp-Vls"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How To Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2M9-Md-eju">
+                                <rect key="frame" x="141" y="333" width="132" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="warcardgame" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c3A-53-7fU">
+                                <rect key="frame" x="51" y="128" width="312" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nfH-YR-9tV">
+                                <rect key="frame" x="23" y="432" width="369" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">首先進入遊戲畫面
+左邊是屬於玩家的撲克牌
+右邊是屬於電腦的撲克牌
+然後下面有一個按鈕
+進行與電腦對決的抽牌
+如果抽到的牌是比對方大
+等於獲得一分
+最下面的按鈕是將兩邊比分重置
+遊戲最後勝利是鬥快去到十分就能勝利</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12265519370615952" green="0.4771899287564767" blue="0.21536766485967837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NAq-m2-acD" firstAttribute="centerX" secondItem="E05-ts-L6T" secondAttribute="centerX" id="P2o-gP-mXi"/>
+                            <constraint firstItem="NAq-m2-acD" firstAttribute="centerY" secondItem="E05-ts-L6T" secondAttribute="centerY" id="Twr-Wl-WSk"/>
+                            <constraint firstItem="NAq-m2-acD" firstAttribute="top" secondItem="Df8-Rp-wSK" secondAttribute="top" constant="10" id="Xp6-TN-kQ4"/>
+                            <constraint firstItem="Df8-Rp-wSK" firstAttribute="bottom" secondItem="Ctn-hb-rP4" secondAttribute="bottom" constant="30" id="mc5-y1-jZS"/>
+                            <constraint firstItem="Df8-Rp-wSK" firstAttribute="trailing" secondItem="NAq-m2-acD" secondAttribute="trailing" constant="82" id="sKq-ma-ZJd"/>
+                            <constraint firstItem="NAq-m2-acD" firstAttribute="leading" secondItem="Df8-Rp-wSK" secondAttribute="leading" constant="82" id="zUq-Ub-h3S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Df8-Rp-wSK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4kZ-TI-f3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-301.44927536231887" y="131.91964285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="414" height="896"/>
+        <image name="warcardgame" width="300" height="300"/>
+    </resources>
+</document>
