@@ -1,0 +1,57 @@
+// Mak Chi Wang Ex11 inheritance
+class bankaccount {
+ var hkdbalance = 0.0
+ var name : String = ""
+ var address: String = ""
+ func openaccount(customername: String) {
+ name = customername
+ }
+ func setaddress(customeraddress: String) {
+ address = customeraddress
+ }
+ func deposit(hkdamount: Double) {
+ hkdbalance += hkdamount
+ }
+ func withdraw(hkdamount: Double) {
+ hkdbalance -= hkdamount
+ }
+ func resetbalance() {
+ hkdbalance = 0.0
+ }
+}
+class foreigncurrencyaccount: bankaccount {
+ var usdbalance = 0.0
+ var usdtohkd = 8.0
+ func exchangehkdtousd(hkdamount : Double) {
+ usdbalance = usdbalance + hkdamount/usdtohkd
+ hkdbalance = hkdbalance - hkdamount
+ }
+
+ var hkdtousd = 8.0
+ func exchangeusdtohkd(usdamount : Double) {
+ hkdbalance = hkdbalance + usdamount*hkdtousd
+ usdbalance = usdbalance - usdamount
+ }
+} 
+// define exchangeusdtohkd here to convert usd back to hkd
+
+var customerdepositaccount1 = foreigncurrencyaccount()
+customerdepositaccount1.openaccount(customername:"John Woo")
+customerdepositaccount1.setaddress(customeraddress:"Sham Shui Po")
+print("name: \(customerdepositaccount1.name)\naddress: \(customerdepositaccount1.address)")
+print("balance: \(customerdepositaccount1.hkdbalance)\n")
+// sets the customer address to Shamshuipo and prints out the address
+customerdepositaccount1.deposit(hkdamount: 10000)
+print("hkd balance: \(customerdepositaccount1.hkdbalance)")
+print("usd balance: \(customerdepositaccount1.usdbalance)\n")
+
+customerdepositaccount1.exchangehkdtousd(hkdamount: 5000)
+print("hkd balance: \(customerdepositaccount1.hkdbalance)")
+print("usd balance: \(customerdepositaccount1.usdbalance)\n")
+// Converts HKD 5000 into USD by called the function exchangehkdtousd
+// and prints out hkd and usbalance
+customerdepositaccount1.exchangeusdtohkd(usdamount: 100)
+print("hkd balance: \(customerdepositaccount1.hkdbalance)")
+print("usd balance: \(customerdepositaccount1.usdbalance)")
+// Call the function named ‘exchangeusdtohkd’
+// Then converts USD 100 to HKD and then prints out hkd and usdblanc
